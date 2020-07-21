@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+/*
+input[type=radio]{
+    display:none;
+}
+*/
+h3{
+    margin-top:50px;
+    text-align: center;
+}
+#body_slider1{
+    width:970px;
+    max-width:100%;
+    min-width:970px;
+    margin:0 auto;
+}
+#body_slides{
+    position:relative;
+
+}
+#body_overflow{
+    width:100%;
+    overflow:hidden;
+}
+.bodyinner{
+    transition: margin-left 600ms cubic-bezier(0.770, 0.000, 0.175, 1.000);   
+    width:400%;
+    height:400px;
+}
+.item{
+    display:flex;
+    width:25%;
+    float:left;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+.in{
+    text-align:center;
+    margin:0 3px 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: gray;
+}
+.item img{
+    width:310px;
+    height:250px;
+}
+.subtitle {
+    font-size:20px;
+    padding-left:10px;
+}
+.content{
+    font-size:12px;
+    padding-left:10px;
+    border-bottom:1px solid black;
+}
+
+#button1:checked ~ #body_slides .bodyinner{
+    margin-left: 0;
+}
+#button2:checked ~ #body_slides .bodyinner{
+    margin-left: -100%;
+}
+#button3:checked ~ #body_slides .bodyinner{
+    margin-left: -200%;
+}
+#button4:checked ~ #body_slides .bodyinner{
+    margin-left: -300%;
+}
+#arrows {
+    position:relative;
+    height:30px;
+    top:-220px;
+    z-index:5;
+}
+#arrows label{
+    width:20px;
+    height:20px;
+    display:none;
+}
+#button1:checked ~ #arrows label:nth-child(2),
+#button2:checked ~ #arrows label:nth-child(3),
+#button3:checked ~ #arrows label:nth-child(4),
+#button4:checked ~ #arrows label:nth-child(1){
+    background:url(https://image.flaticon.com/icons/svg/860/860828.svg) no-repeat;
+    display:block;
+    float:right;
+    margin-right:-20px
+}
+#button1:checked ~ #arrows label:nth-child(4),
+#button2:checked ~ #arrows label:nth-child(1),
+#button3:checked ~ #arrows label:nth-child(2),
+#button4:checked ~ #arrows label:nth-child(3){
+   background:url(https://image.flaticon.com/icons/svg/860/860790.svg) no-repeat;
+    display:block;
+    float:left;
+    margin-left:-20px
+}
