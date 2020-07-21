@@ -111,7 +111,6 @@
     float:right;
     margin:0 -25px 0 0;
 }
-    
 #banner_slider_1:checked ~ #arrows label:nth-child(5),
 #banner_slider_2:checked ~ #arrows label:nth-child(1),
 #banner_slider_3:checked ~ #arrows label:nth-child(2),
